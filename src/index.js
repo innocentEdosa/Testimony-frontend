@@ -5,7 +5,7 @@ import App from './container/App';
 import apolloClient from './graphql/config';
 
 render(
-<ApolloProvider client={apolloClient}>
-  <App />
-</ApolloProvider>, document.getElementById('root')
+  <ApolloProvider client={apolloClient}>
+    <App />
+  </ApolloProvider>, document.getElementById('root'),
 );

@@ -1,0 +1,10 @@
+.modal {
+  background-color: var(--primary-modal-background-color);
+  margin: 0 auto;
+  width: var(--primary-modal-width);
+  position: absolute;
+  top: var(--primary-modal-top);
+  left: var(--primary-modal-left);
+  transform: translate(-50%, -50%);
+  box-shadow: var(--primary-modal-box-shadow);
+}

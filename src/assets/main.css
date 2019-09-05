@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700&display=swap');
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-button-color: purple;
+  --primary-text-color: #333;
+  --primary-input-text-color: #555;
+  --primary-label-color: #888;
+  --primary-backdrop-color: rgba(26, 25, 25, 0.4);
+  --primary-modal-width: 70%;
+  --primary-modal-top: 30%;
+  --primary-modal-left: 50%;
+  --primary-modal-background-color: transparent;
+  --primary-modal-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  --primary-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+  --primary-border-radius: 5px;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-text-color);
+}

@@ -19,5 +19,8 @@ module.exports = {
         "react"
     ],
     "rules": {
+       "eslint-disable react/jsx-filename-extension": true,
+       "jsx-a11y/label-has-associated-control": true
     }
 };
+
