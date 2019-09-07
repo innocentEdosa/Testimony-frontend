@@ -6,18 +6,38 @@
 }
 
 :root {
-  --primary-button-color: purple;
+  --primary-emphasis-color: #800080;
+  --primary-button-color: #800080;
   --primary-text-color: #333;
   --primary-input-text-color: #555;
   --primary-label-color: #888;
   --primary-backdrop-color: rgba(26, 25, 25, 0.4);
+  --primary-modal-background-color: transparent;
+  --primary-error-color: #ff0000;
+  --primary-heading-color: rgb(22, 22, 22);
+
   --primary-modal-width: 70%;
   --primary-modal-top: 30%;
   --primary-modal-left: 50%;
-  --primary-modal-background-color: transparent;
+
   --primary-modal-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
   --primary-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+
   --primary-border-radius: 5px;
+  --primary-border-color: rgba(128, 0, 128, 0.5);
+
+  --primary-margin-bottom: 1.2rem;
+  --primary-margin-top-bottom: 1rem 0rem;
+  --primary-input-margin-bottom: 2rem;
+
+  --primary-button-padding: 1.2rem 0rem;
+  --primary-padding-top-bottom: 1rem 0rem;
+
+  --primary-input-padding: 1.2rem 1rem;
+  --primary-input-font-size: 1.6rem;
+
+  --primary-form-button-font-size: 1.6rem;
+  --primary-button-bg-color: #800080;
 }
 
 html {
@@ -28,4 +48,26 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
+}
+
+a, a::before, a::after {
+  text-decoration: none;
+}
+
+.emphasis {
+  color: var(--primary-emphasis-color);
+  font-size: 1.6rem;
+}
+
+.emphasis2 {
+  color: var(--primary-emphasis-color);
+  font-size: 1.3rem;
+}
+
+.m-r {
+  margin-left: 1rem;
+}
+
+.pt-05 {
+  padding-top: 0.5rem;
 }

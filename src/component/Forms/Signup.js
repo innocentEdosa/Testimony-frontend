@@ -1,60 +1,67 @@
-import React from 'react';
-import './form.css';
+import React from "react";
+import "./form.css";
+import Svg from '../Commons/SVG';
+import { mobileGoggle, mobileChevronLeft, mobileFacebook } from '../Commons/svgs';
 
-const Signup = () => (
-  <div className="twoSidedForm">
-    <div className="leftSide">this is the left side now</div>
-    <div className="rightSide">
-      <form action="" method="" className="signupForm">
-        <p className="infoText">
-          Welcome we are really glad to have you join Testimony hub
-        </p>
-        <label className="formLabel">First name</label>
-        <input
-          id="firstName"
-          className="formInput"
-          type="text"
-          name="firstName"
-          required
-        />
-        <label htmlFor="lastName" className="formLabel">Last name</label>
-        <input
-          id="lastName"
-          className="formInput"
-          type="text"
-          name="lastName"
-          required
-        />
-        <label className="formLabel">Email</label>
-        <input
-          id="email"
-          className="formInput"
-          type="email"
-          name="email"
-          required
-        />
-        <label className="formLabel">Password</label>
-        <input
-          id="password"
-          className="formInput"
-          type="password"
-          name="password"
-          required
-        />
-        <label className="formLabel">Verify Password</label>
-        <input
-          id="lastName"
-          className="formInput"
-          type="text"
-          name="lastName"
-          required
-        />
-        <button type="submit" className="formButton">
-          Sign up
+const Signup = () => {
+  const renderForm = () => (
+    <section className="signupWrapper">
+      <div className="formBack">
+        {Svg(mobileChevronLeft)}
+      </div>
+      <div className="formInfoText">
+        <h4 className="formInfoText-heading">Sign Up</h4>
+        <h6 className="formInfoText-sub">We are really glad to have you join Testimony Hub</h6>
+      </div>
+      <div className="socialAuth">
+        <button type="submit" className="socialAuth-button socialAuth-button-facebook">
+          {Svg(mobileFacebook)} <span className="pt-05 m-r">Sign up with facebook</span>
         </button>
+        <button type="submit" className="socialAuth-button socialAuth-button-goggle">
+        {Svg(mobileGoggle)} <span className=" m-r">Sign up with goggle</span>
+        </button>
+      </div>
+      <p className="emailAuth">
+        <span className="divider"> OR </span>
+        <a href=""><span className="emailAuth-link">Sign up with your <span className="emphasis">Email</span></span></a>
+         </p>
+      <form className="signupForm" action="" method="">
+      <div className="formGroup">
+        <label htmlFor="email" className="formLabel">
+          Your Email
+        </label>
+        <input type="email" name="email" className="formInput" id="email" required/>
+      </div>
+      <div className="formGroup">
+        <label htmlFor="password" className="formLabel">
+          Choose your Password
+        </label>
+        <input type="password" name="password" className="formInput" id="password" required/>
+      </div>
+      <div className="formGroup">
+        <label htmlFor="confirmPassword" className="formLabel">
+          Confirm your Password
+        </label>
+        <input type="password" name="confirmPassword" className="formInput" id="confirmPassword" required/>
+      </div>
+      <div className="formGroup">
+        <button className="formButton" type="submit">
+          Sign Up
+        </button>
+      </div>
       </form>
-    </div>
-  </div>
-);
+      <div className="subInfo">
+      <a className="" href="" >Already have an account? <span className="emphasis">Log in</span></a>
+      </div>
+      <div className="policyAgreement">
+        by clicking <span className="emphasis2">Sign up</span>,
+        you agree to the <span className="emphasis2">terms and condition</span> of Testimony hub and also confirms that you have read our <span className="emphasis2">privacy agreement</span>
+      </div>
+    </section>
+
+  );
+
+  return renderForm();
+};
 
 export default Signup;
